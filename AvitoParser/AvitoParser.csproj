@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5C919986-C8C3-4CA3-975E-894633788F7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AvitoParser</RootNamespace>
+    <RootNamespace>MyCompany.Avito.Parser</RootNamespace>
     <AssemblyName>AvitoParser</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -42,11 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Enums\District.cs" />
+    <Compile Include="Data\Enums\Material.cs" />
+    <Compile Include="Data\Getter\AvitoDataGetter.cs" />
+    <Compile Include="Data\AvitoRequestSettings.cs" />
+    <Compile Include="Data\Getter\IAvitoDataGetter.cs" />
+    <Compile Include="Data\IAvitoRequestSettings.cs" />
+    <Compile Include="Helpers\IUrlHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Parser\AvitoParser.cs" />
+    <Compile Include="Parser\IAvitoParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
