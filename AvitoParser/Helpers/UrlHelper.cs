@@ -70,6 +70,10 @@ namespace MyCompany.Avito.Parser.Helpers {
          }
       }
 
+      public string GetUrl(AvitoItem item) {
+         return $"{AVITO_MAIN_URL}{item.Url}";
+      }
+
       private void AddParameters(StringBuilder urlBuilder, IAvitoRequestSettings settings) {
          const char PARAMETER_START = '?';
          if (settings.HasParameters) {

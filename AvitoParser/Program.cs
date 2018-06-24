@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using MyCompany.Avito.Parser.Data;
 using MyCompany.Avito.Parser.Data.Enums;
 using MyCompany.Avito.Parser.Parser;
@@ -18,7 +19,20 @@ namespace MyCompany.Avito.Parser {
             MinSquare = 60
             };
 
-         var result = new AvitoParser().Get(settings).Result;
+         var parser = new AvitoParser();
+
+         var avitoItems = parser.Get(settings).Result;
+
+         foreach (var item in avitoItems) {
+            var flatItem = parser.GetFlat(item).Result;
+            Console.WriteLine(flatItem.Title);
+            Console.WriteLine(flatItem.Address);
+            Console.WriteLine(flatItem.Desciption);
+            Console.WriteLine();
+            Thread.Sleep(1000);
+         }
+
+         Console.ReadLine();
       }
    }
 }

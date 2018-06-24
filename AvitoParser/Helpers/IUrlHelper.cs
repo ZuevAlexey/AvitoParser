@@ -6,5 +6,7 @@ namespace MyCompany.Avito.Parser.Helpers {
    /// </summary>
    internal interface IUrlHelper {
       string GetUrl(IAvitoRequestSettings settings);
+
+      string GetUrl(AvitoItem item);
    }
 }

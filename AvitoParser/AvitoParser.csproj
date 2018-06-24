@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AvitoFlatItem.cs" />
+    <Compile Include="Data\AvitoItem.cs" />
     <Compile Include="Data\Enums\District.cs" />
     <Compile Include="Data\Enums\Material.cs" />
-    <Compile Include="Data\Getter\AvitoDataGetter.cs" />
     <Compile Include="Data\AvitoRequestSettings.cs" />
-    <Compile Include="Data\Getter\IAvitoDataGetter.cs" />
     <Compile Include="Data\IAvitoRequestSettings.cs" />
     <Compile Include="Helpers\IUrlHelper.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
